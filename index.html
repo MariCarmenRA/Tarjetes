@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        
+        html{
+            min-height: 100%; 
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "Georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,blue,purple);
+            color: purple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 20em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 20px purple;
+        }
+        .dissenyador_img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+            background: purple;
+        }
+        .dissenyador_img img{
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            mix-blend-mode: lighten;
+        }
+        .dissenyador:first-child .disseyador_img img{
+            object-position: top;
+        }
+        .dissenyador:last-child .disseyador_img img{
+            object-position: left;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-size: 0.9em;
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .dissenyador_contingut{
+            display: flex;
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+    
+        
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/April%20Greiman.jpg" alt="Abril Greiman">
+            </div>
+            <header>
+                <h3>Abril Greiman</h3>
+                <span>1948</span>
+            </header>
+            <p class="dissenyador_contingut">
+                April Greiman es una diseñadora gráfica, nacida en Estados Unidos.Comenzó sus estudios en el Kansas City Art Institute a finales de los sesenta para completarlos durante dos intensos años en la Kunstgewerbeschule de Basilea con el influyente Wolfgang Weingart. En aquellos años Weingart comenzaba a poner en cuestión algunos de los principios que habían inspirado la metodología del Movimiento Moderno como el rígido uso de la retícula o la intocable pureza del espacio bidimensional.A mediados de los años setenta, Greiman comenzó a trabajar para el Taxi Project del Museum of Modern Art en Nueva York diseñando las publicaciones y demás elementos de promoción. En 1976 se trasladó a Los Ángeles para colaborar con el California Institute of Art donde conoció al fotógrafo Jayme Odgers y se interesó por la fotografía experimental y los ordenadores. Greiman creó una iconografía muy particular en su impresos para el California Institute of Art plenamente relacionado con lo que después se conocería como New Wave, una corriente que definitivamente rompía con las corrientes más académicas del diseño gráfico. Su concepción del diseño concibe la página como si esta fuera un espacio tridimensional donde la tipografía, la fotografía y el resto de los elementos se mezclaran felizmente sin jerarquías y en un complejo orden.
+            </p>
+            <footer class="dissenyador_peu">
+                A partir de 1984 comienza a utilizar de formar sistemática el ordenador personal en su trabajo utilizando imágenes en baja resolución y tipografía bitmap, una forma de trabajo que puede relacionarla con otros creadores europeos como Terry Jones.
+
+            </footer>
+        </div>
+        <div class="dissenyador">
+            <div class="dissenyador_img"> 
+            <img src="img/1_BxeeTRmxWp-jO2T-Di_v0w.jpeg" alt="Muriel Cooper">
+            </div>
+            <header>
+                <h3>Muriel Cooper</h3>
+                <span>1925</span>
+            </header>
+            <p class="dissenyador_contingut">
+                Muriel Cooper (1925 - 26 de mayo de 1994) fue un diseñador de libros, diseñador digital, investigador y educador pionero. Fue la directora de arte de MIT Press desde hace mucho tiempo , inculcando un estilo de diseño influenciado por Bauhaus en sus numerosas publicaciones. Ella se convirtió en fundadora del Taller de Lenguaje Visible del MIT , y más tarde se convirtió en cofundadora del Laboratorio de Medios del MIT . En 2007, un artículo del New York Times la llamó "la heroína del diseño de la que probablemente nunca hayas oído hablar". Cooper recibió su Licenciatura en Artes del Estado de Ohio en 1944, y una Licenciatura en Bellas Artes en diseño en 1948 y una Licenciatura en Ciencias en educación en 1951 de Massachusetts College of Art . Después de su graduación, Cooper se mudó a la ciudad de Nueva York e intentó encontrar un puesto en publicidad. Conoció a Paul Rand , quien influyó en su diseño "estilo de vida".En 1952, Cooper se convirtió en diseñador independiente en la Oficina de Publicaciones del Instituto Tecnológico de Massachusetts , que eventualmente se convertiría en MIT Press .
+            </p>
+            <footer class="dissenyador_peu">
+                Allí, colaboró con Gyorgy Kepes , profesora de diseño visual en el MIT y ex colega del artista László Moholy-Nagy en Hungría . Pronto fue nombrada para dirigir la Oficina, recientemente renombrada a Design Services, que fue uno de los primeros programas de diseño universitario en el país.
+
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
